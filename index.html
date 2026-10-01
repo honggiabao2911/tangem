@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8cbdc">
+<meta name="description" content="Những đốm sáng, một điều ước, cuốn sổ kỷ niệm và cả một vũ trụ màu hồng. Chúc mừng sinh nhật em yêu.">
+<meta name="color-scheme" content="light">
+<title>Cả một vũ trụ dành cho em ♡</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f8cbdc'/%3E%3Cpath d='M32 48 14 30C1 16 24 6 32 22 40 6 63 16 50 30Z' fill='%23b54470'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./assets/fonts.css">
+<link rel="stylesheet" href="./style.css">
+<script src="./config.js" defer></script>
+<script src="./effects.js" defer></script>
+<script src="./book.js" defer></script>
+<script src="./app.js" defer></script>
+</head>
+<body data-scene="heart">
+<canvas id="ambient" aria-hidden="true"></canvas><canvas id="celebrationFx" aria-hidden="true"></canvas>
+<header class="topbar"><span class="brand"><span aria-hidden="true">♡</span> for my love</span><div class="top-actions"><button id="motionButton" class="icon-button" type="button" aria-label="Tạm dừng chuyển động" aria-pressed="false">Ⅱ</button><button id="musicButton" class="music-button" type="button" aria-pressed="false" aria-label="Bật nhạc"><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="musicLabel">Bật nhạc</span></button></div></header>
+<main id="experience">
+  <section class="scene heart-scene" id="scene-heart" aria-labelledby="heartTitle">
+    <div class="chapter-heading"><p class="eyebrow">A LITTLE UNIVERSE, JUST FOR YOU</p><h1 id="heartTitle" tabindex="-1">Một trái tim,<br><em>ngàn lời yêu.</em></h1></div>
+    <canvas id="heartCanvas" role="img" aria-label="Một trái tim đập, bung thành hàng nghìn trái tim nhỏ rồi bắn thành chữ Chúc mừng sinh nhật em yêu"></canvas>
+    <div class="scene-bottom heart-bottom"><p id="heartCaption" class="soft-caption" aria-live="polite">Một chút hồi hộp, trước khi điều kỳ diệu bắt đầu…</p><button id="heartContinue" class="primary" type="button">Mở món quà của em <span aria-hidden="true">↗</span></button><button id="replayHearts" class="text-button" type="button">Bắn tim ghép chữ lần nữa</button></div>
+  </section>
+  <section class="scene lock-scene" id="scene-lock" hidden aria-labelledby="lockTitle">
+    <div class="lock-heading"><p class="eyebrow">CHỈ NGƯỜI THƯƠNG MỚI BIẾT</p><h2 id="lockTitle" tabindex="-1">Một bí mật nhỏ,<br><em>một tình yêu thật lớn.</em></h2><p class="body-copy">Em có chìa khóa của trái tim này.</p></div>
+    <form id="pinForm" class="secret-card" novalidate><div class="secret-caption"><span aria-hidden="true">♡</span><label for="pinInput">Mật mã của chúng mình</label><span aria-hidden="true">♡</span></div>
+      <div class="pin-field" id="pinField"><div class="pin-boxes" aria-hidden="true"><span></span><span></span><span></span><span></span></div><input id="pinInput" aria-label="Mật mã gồm bốn chữ số" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" enterkeyhint="go" aria-describedby="pinStatus"></div>
+      <p id="pinStatus" class="pin-status" role="status">Bốn con số, dành riêng cho hai đứa.</p>
+      <div class="keypad" aria-label="Bàn phím nhập mật mã"><button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button type="button" data-key="clear" class="key-small" aria-label="Xóa tất cả">Xóa</button><button type="button" data-key="0">0</button><button type="button" data-key="back" class="key-small" aria-label="Xóa một số">⌫</button></div>
+      <button type="submit" class="primary" id="unlockButton">Mở quà của em <span aria-hidden="true">♡</span></button>
+    </form><p class="scene-footnote">Một chút hồi hộp. Thật nhiều yêu thương.</p>
+  </section>
+  <section class="scene candle-scene" id="scene-candle" hidden aria-labelledby="candleTitle">
+    <div class="chapter-heading"><p class="eyebrow">01 / NHẮM MẮT VÀ ƯỚC</p><h2 id="candleTitle" tabindex="-1">Giữ một điều ước,<br><em>thổi một chút yêu thương.</em></h2><p class="body-copy" id="candleSubtitle">Mong mọi điều dịu dàng sẽ tìm đến em.</p></div>
+    <div class="real-cake" id="cakeStage" role="img" aria-label="Bánh sinh nhật màu hồng với một ngọn nến đang cháy"><img src="./assets/pink-cake.webp" alt="" width="1254" height="1254" draggable="false" loading="lazy"><canvas id="candleCanvas" aria-hidden="true"></canvas><span class="cake-aside" aria-hidden="true">make a little wish ♡</span></div>
+    <div class="candle-actions"><div id="beforeWish"><button id="micButton" type="button" class="primary"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span id="micLabel">Thổi nến bằng micro</span></button><div class="mic-meter" id="micMeter" role="progressbar" aria-label="Mức âm thanh thổi nến" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div><p id="micStatus" class="small-copy" role="status">Cho phép micro, rồi thổi nhẹ vào điện thoại.</p><button id="tapBlow" class="text-button" type="button">Hoặc chạm để tắt nến</button></div><div id="afterWish" hidden><p class="wish-success">Điều ước đã được gửi đi. ♡</p><button id="openCards" class="primary" type="button">Mở cuốn sổ dành cho em ↗</button><button id="relightButton" class="text-button" type="button">Ước thêm một điều nữa</button></div></div>
+  </section>
+  <section class="scene cards-scene" id="scene-cards" hidden aria-labelledby="cardsTitle">
+    <div class="chapter-heading"><p class="eyebrow">02 / OUR LITTLE LOVE STORY</p><h2 id="cardsTitle" tabindex="-1">Những ngày <em>có em.</em></h2></div>
+    <div class="book-scene" id="bookScene"><div class="book-shadow" aria-hidden="true"></div><div class="memory-book" id="memoryBook" aria-label="Sổ ảnh kỷ niệm, dùng nút hoặc vuốt để lật trang"><div class="book-base" aria-hidden="true"></div></div></div>
+    <div class="book-controls"><button id="prevPage" class="page-arrow" type="button" aria-label="Lật về trang trước">←</button><p id="bookStatus" role="status">Chạm vào bìa để mở thiệp</p><button id="nextPage" class="page-arrow" type="button" aria-label="Mở thiệp, lật trang tiếp">→</button></div><p class="book-hint">Vuốt để lật trang · Chạm ảnh để xem gần hơn</p>
+    <button id="openLetter" class="primary" type="button">Một lời thương viết riêng cho em <span aria-hidden="true">♡</span></button>
+  </section>
+  <section class="scene letter-scene" id="scene-letter" hidden aria-labelledby="letterTitle">
+    <div class="chapter-heading"><p class="eyebrow">03 / GỬI NGƯỜI ANH THƯƠNG</p><h2 id="letterTitle" tabindex="-1">Có những điều<br><em>anh muốn em biết.</em></h2></div>
+    <div class="envelope-wrap" id="envelopeWrap"><div class="envelope" id="envelope"><div class="envelope-flap" aria-hidden="true"></div><div class="envelope-pocket" aria-hidden="true"></div><button class="wax-seal" id="openEnvelope" aria-label="Mở phong thư" type="button">♡</button><span class="envelope-to">gửi em, bằng tất cả dịu dàng.</span></div>
+    <article class="personal-letter" id="personalLetter" hidden><p class="letter-date">MỘT NGÀY RẤT ĐẶC BIỆT</p><h3>Em yêu à,</h3><div id="typedLetter" aria-hidden="true"></div><div id="accessibleLetter" class="sr-only"></div><p class="letter-signature">Thương em,<br><em id="letterSignature"></em></p><button id="showFullLetter" class="text-button" type="button">Đọc trọn lá thư</button></article></div>
+    <p class="envelope-hint" id="envelopeHint">Chạm vào dấu trái tim để mở thư nhé.</p><button id="goFinale" class="primary" type="button" hidden>Bước vào thế giới của em <span aria-hidden="true">✧</span></button>
+  </section>
+  <section class="scene finale-scene" id="scene-finale" hidden aria-labelledby="finaleTitle">
+    <div class="chapter-heading finale-heading"><p class="eyebrow">04 / A UNIVERSE OF US</p><h2 id="finaleTitle" tabindex="-1">Vũ trụ này,<br><em>có em ở giữa.</em></h2></div>
+    <div class="universe-stage" id="universeStage"><div id="universe3d" class="universe-3d" role="img" aria-label="Bánh sinh nhật 3D lấp lánh, các khối ảnh xoay và lời chúc bay giữa thiên hà hồng"></div><canvas id="universeCanvas" role="img" aria-label="Bánh kem lấp lánh và ảnh xoay quanh, kéo để xoay, chạm ảnh để phóng to"></canvas><div class="universe-labels" id="universeLabels" aria-hidden="true"></div></div>
+    <div class="finale-bottom"><p class="interaction-hint">Kéo để xoay · Chạm khối ảnh để xem</p><div class="finale-tools"><button id="zoomOut" type="button" aria-label="Thu nhỏ bánh 3D">−</button><button id="resetView" type="button">Góc nhìn ban đầu</button><button id="zoomIn" type="button" aria-label="Phóng to bánh 3D">+</button></div><div class="finale-buttons"><button id="heartFormation" type="button" class="primary" aria-pressed="false">Ghép ảnh thành tim ♡</button><button id="fireworksButton" type="button" class="secondary">Bắn pháo hoa <span aria-hidden="true">✧</span></button><button id="lastLetterButton" type="button" class="text-button">Lời nhắn cuối ♡</button></div><button id="restartButton" type="button" class="text-button">Xem lại từ đầu</button></div>
+  </section>
+</main>
+<nav id="chapterNav" class="chapter-nav" aria-label="Các chương của món quà" hidden><button type="button" data-scene="candle" aria-label="Điều ước"><i></i><span>01</span></button><button type="button" data-scene="cards" aria-label="Sổ ảnh" disabled><i></i><span>02</span></button><button type="button" data-scene="letter" aria-label="Thư gửi em" disabled><i></i><span>03</span></button><button type="button" data-scene="finale" aria-label="Thế giới 3D" disabled><i></i><span>04</span></button></nav>
+<dialog id="photoDialog" class="photo-dialog" aria-labelledby="photoTitle"><button type="button" class="dialog-close" data-close="photoDialog" aria-label="Đóng ảnh">×</button><img id="largePhoto" alt="" width="900" height="1200"><h2 id="photoTitle"></h2><p id="photoNote"></p></dialog>
+<dialog id="lastLetter" class="letter-dialog" aria-labelledby="lastLetterTitle"><button type="button" class="dialog-close" data-close="lastLetter" aria-label="Đóng lời nhắn">×</button><div class="letter-paper"><p class="eyebrow">SAU TẤT CẢ NHỮNG BẤT NGỜ…</p><span class="paper-heart" aria-hidden="true">♡</span><h2 id="lastLetterTitle">Anh chỉ muốn nói,</h2><p>Anh rất vui vì có em trong cuộc đời mình.</p><p>Mong tuổi mới của em có những chuyến đi đáng nhớ, những việc em làm vì yêu thích, và những ngày bình thường mà vẫn thấy vui.</p><p>Khi mệt thì nghỉ một chút. Khi buồn thì kể anh nghe. Em không cần phải lúc nào cũng mạnh mẽ.</p><p>Sinh nhật vui vẻ, em nhé. Cảm ơn em vì đã ở bên anh.</p><div class="letter-end">Thương em,<br><em>hôm nay và những ngày sau.</em></div><button type="button" class="letter-done" data-close="lastLetter">Giữ lời thương này nhé ♡</button></div></dialog>
+<div id="toast" class="toast" role="status"></div><div class="scene-curtain" id="sceneCurtain" aria-hidden="true"></div>
+<audio id="birthdayMusic" src="./nhac.mp3" loop preload="metadata"></audio>
+<noscript><p class="noscript-note">Bật JavaScript để mở món quà, nghe nhạc và thổi nến nhé. Chúc mừng sinh nhật em! ♡</p></noscript>
+</body>
+</html>

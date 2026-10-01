@@ -1,0 +1,57 @@
+CẢ MỘT VŨ TRỤ DÀNH CHO EM — HƯỚNG DẪN THAY ẢNH VÀ NHẠC
+
+CẦN 8 ẢNH
+Đặt ảnh cùng thư mục với index.html, giữ chính xác các tên sau:
+
+anh1.jpg — Ảnh yêu thích của em: bìa sổ + trang 01 bên trái.
+anh2.jpg — Ảnh hai đứa: trang 02 bên phải.
+anh3.jpg — Một buổi hẹn: trang 03 bên trái, lần lật tiếp theo.
+anh4.jpg — Nụ cười của em: trang 04 bên phải.
+anh5.jpg — Kỷ niệm đi chơi: trang 05 bên trái.
+anh6.jpg — Khoảnh khắc đời thường: trang 06 bên phải.
+anh7.jpg — Tấm ảnh đáng yêu: trang 07 bên trái.
+anh8.jpg — Ảnh kết thúc yêu thích: trang 08 bên phải.
+
+Cả 8 ảnh được dùng lại trên các khối ảnh xoay quanh bánh 3D.
+Điện thoại có 8 khối chính + 4 khối phụ; màn rộng có 8 khối chính + 8 khối phụ. Không cần thêm ảnh.
+Không cần chuẩn bị thêm ảnh bánh kem.
+Nên dùng ảnh dọc tỷ lệ 3:4, rộng 800–1200 px, khuôn mặt tránh sát mép.
+Xuất thành JPEG thật; đổi đuôi HEIC/PNG thành .jpg không chuyển định dạng ảnh.
+Ảnh có sẵn chỉ là ảnh minh họa được tạo (hoa, biển, bánh), có lặp lại.
+
+NHẠC
+Tên chính xác: nhac.mp3 (có dấu chấm).
+Đặt cùng thư mục index.html. Ghi đè file này bằng bài nhạc của hai bạn.
+File đi kèm là một đoạn piano không lời mẫu.
+Nhạc bắt đầu sau khi chạm “Mở món quà” hoặc “Bật nhạc”; điện thoại thường chặn tự phát nhạc trước lần chạm đầu tiên.
+
+MẬT MÃ VÀ LỜI CHÚC
+Mật mã: 2108.
+Mở config.js để sửa password, chữ ký signature, caption/note của từng ảnh và nội dung letter.
+Đây là mật mã mở bất ngờ ở giao diện, không phải hệ thống xác thực bảo mật.
+
+TRẢI NGHIỆM
+Trái tim đập → bung tim → bắn tim ghép chữ → Mở quà → 2108 → Thổi nến → Sổ ảnh → Mở thư → Bánh 3D.
+- Micro chỉ mở khi chạm nút, rồi tắt khi thổi xong, đổi màn hoặc rời trang.
+- Có nút chạm tắt nến nếu micro không được cho phép hoặc không hỗ trợ.
+- Sổ chỉ hiển thị ảnh, không có chú thích. Vuốt trái/phải hoặc dùng mũi tên để lật 4 cặp trang. Chạm ảnh để xem lớn.
+- Chạm dấu trái tim trên phong thư. “Đọc trọn lá thư” bỏ qua hiệu ứng gõ chữ.
+- Màn 3D: kéo ngang xoay 360°, dùng +/− để phóng/thu, chạm khối ảnh để xem.
+- “Ghép ảnh thành tim” chuyển 8 ảnh chính thành hình trái tim. Bấm lại để quay về thiên hà.
+- Có sao băng, lời chúc ở nhiều độ sâu, quỹ đạo ánh sáng và hạt lấp lánh trên bánh.
+- Nền và số lượng hạt sáng tự giảm chi tiết nếu thiết bị xử lý chậm kéo dài.
+- Nút II ở góc trên dừng chuyển động. Có hỗ trợ tùy chọn giảm chuyển động của thiết bị.
+- Thiết bị không hỗ trợ WebGL dùng màn bánh hạt sáng dự phòng.
+
+ĐĂNG WEBSITE
+Đưa toàn bộ nội dung thư mục này lên dịch vụ website tĩnh có HTTPS.
+Giữ index.html ở thư mục gốc; giữ nguyên assets/ và vendor/.
+Font, ảnh, nhạc và thư viện đều có sẵn, không cần CDN khi xem.
+Micro cần HTTPS hoặc localhost.
+Mở index.html trực tiếp bằng file:// có thể không chạy màn 3D do giới hạn module của trình duyệt.
+Để thử trên máy tính có Python: chạy `python3 -m http.server 8000` trong thư mục này, rồi vào http://localhost:8000.
+
+KIỂM TRA
+Đã kiểm tra luồng tương tác, file ảnh/nhạc, micro bị từ chối/hủy, các trang sổ, dữ liệu 3D và khung camera ở chiều rộng 320/390/1200 px.
+Chưa kiểm thử trực tiếp trên điện thoại iPhone/Android thật. Nên xem lại trên điện thoại sẽ dùng sau khi thay ảnh/nhạc.
+Three.js 0.160.0 dùng giấy phép MIT; giữ tệp giấy phép trong vendor/.
